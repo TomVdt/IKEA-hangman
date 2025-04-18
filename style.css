@@ -1,0 +1,133 @@
+:root {
+    --ikea-yellow: #FBD914;
+    --ikea-blue: #0058AB;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.title {
+    box-sizing: border-box;
+    width: 100%;
+    height: 16rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    background-color: var(--ikea-blue);
+}
+
+.title h1 {
+    color: var(--ikea-yellow);
+    font-weight: 900;
+    font-size: 6rem;
+    margin: 1rem;
+}
+
+a {
+    color: var(--ikea-yellow);
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: red;
+}
+
+
+#game {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    #game {
+        flex-direction: row;
+    }    
+}
+
+.flex-item {
+    flex-grow: 1;
+    position: relative;
+}
+
+.letter {
+    color: var(--ikea-yellow);
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    min-width: 4rem;
+    min-height: 4rem;
+    margin: 0.5rem;
+    user-select: none;
+    background-color: var(--ikea-blue);
+    border-width: 1px;
+    border-color: var(--ikea-blue);
+    box-shadow: 5px 5px 0px 2px color-mix(in oklab, var(--ikea-blue) 50%, #FFF 50%);
+}
+
+.letter-input {
+    width: 3.5rem;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+#main-game-container {
+    width: 80%;
+    text-align: center;
+}
+
+#hangman-word-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#hangman-container {
+    width: 20%;
+}
+
+#hangman-hangman {
+    display: relative;
+}
+
+#hangman-wrong-guesses {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: baseline;
+    padding: 1rem;
+}
+
+footer {
+    box-sizing: border-box;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 5rem;
+    margin: 0;
+    padding: 0.5rem 0 0.5rem 0;
+    text-align: center;
+    background-color: var(--ikea-blue);
+}
+
+footer p {
+    color: var(--ikea-yellow);
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 0;
+}

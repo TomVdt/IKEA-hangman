@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <div class="title">
+            <h1>IKEA Hangman</h1>
+        </div>
+        <div id="game">
+            <div class="flex-item" id="main-game-container">
+                <div id="hangman-word-container"></div>
+                <input type="text" class="letter letter-input" placeholder="?" maxlength="1" id="hangman-letter-guess">
+                <input type="button" value="submit" id="hangman-letter-submit" onclick="state.guessLetter()">
+            </div>
+            <div class="flex-item" id="hangman-container">
+                <div id="hangman-hangman">PLACEHOLDER</div>
+                <div id="hangman-wrong-guesses"></div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <p>
+            Made with 💛 by <a href="https://github.com/TomVdt" target="_blank">@TomVdt</a>
+        </p>
+    </footer>
+</html>
